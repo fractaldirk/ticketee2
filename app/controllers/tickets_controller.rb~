@@ -17,6 +17,7 @@ else
 flash[:alert] = "Ticket has not been created."
 render :action => "new"
 end
+
 def show
 	
 end

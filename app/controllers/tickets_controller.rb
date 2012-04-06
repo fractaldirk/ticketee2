@@ -19,7 +19,6 @@ render :action => "new"
 end
 
 def show
-	
 end
 end
 
