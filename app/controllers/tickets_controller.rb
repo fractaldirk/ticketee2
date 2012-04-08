@@ -39,6 +39,12 @@ def update
 		end
 end
 
+def destroy
+     	#empty because of find_ticket in before_filter
+		@ticket.destroy
+			flash[:notice] = "Ticket has been deleted."
+		redirect_to @project
+end
 
 
 private 
