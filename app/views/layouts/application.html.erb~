@@ -10,7 +10,12 @@
 	<% end %>
 </title>
 <nav>
-	<%= link_to "Sign up", new_user_registration_path %>
+	<% if user_signed_in? %>
+		Signed in as <%= current_user.email %>
+	<% else %>
+		<%= link_to "Sign up", new_user_registration_path %>
+	<% end %>
+
 </nav>
 	<%= stylesheet_link_tag    "application", :media => "all" %>
   	<%= javascript_include_tag "application" %>
