@@ -9,8 +9,8 @@ And that project has a ticket:
 |  Make it shiny! | Gradients! Starbursts! Oh my! |
 And there is a project called "Internet Explorer"
 And that project has a ticket:
-| title                | description                  |
-| Standards compliance | Should be an amazing project |
+| title                | description                   |
+| Standards compliance | Should be an amazing project. |
 And I am on the homepage
 
 Scenario: Viewing tickets for a given project
@@ -27,5 +27,5 @@ Then I should see "Standards compliance"
 And I should not see "Make it shiny!"
 When I follow "Standards compliance"
 Then I should see "Standards compliance" within "#ticket h2"
-And I should see "Should be an amazing project"
+And I should see "Should be an amazing project."
 
