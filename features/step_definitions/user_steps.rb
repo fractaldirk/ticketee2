@@ -1,10 +1,14 @@
 Given /^there are the following users:$/ do |table|
   table.hashes.each do |attributes|
-	unconfirmed = attributes.delete("unconfirmed") == "true"
+  	unconfirmed = attributes.delete("unconfirmed") == "true"
+	admin = attributes.delete("admin")
 	@user = User.create!(attributes)
+	@user.update_attribute("admin", admin == "true")
 	@user.confirm! unless unconfirmed
   end
 end
+
+
 Given /^I am signed in as them$/ do
 	steps(%Q{
 	 Given I am on the homepage
