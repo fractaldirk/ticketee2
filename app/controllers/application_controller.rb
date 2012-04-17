@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :authorize_admin!, :except => [:index, :show]
+  
 private
 
 def authorize_admin!
